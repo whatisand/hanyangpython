@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #2017.03.20. KDW hanyang python
-#And 2017.03.27. 
+#And 2017.03.27. And 2017.04.03.
 import random
 
 print 'Hello! what is your name?'
@@ -32,13 +32,15 @@ while True:
     #TODO Input range check
     if randomNumber == inputnumber:
         print 'Good'
-        print 'you can guess my number in '+ str(wrongTimes) +' times!' 
+        print 'you guess my number in '+ str(wrongTimes) +' times!' 
         break
     
     elif inputnumber > randomNumber:
-        print 'High'
+        print 'High, '
+        print 'Your trial number is '+ str(wrongTimes) +' times!'
         wrongTimes+=1
         
     elif inputnumber < randomNumber:
-        print 'Low'
+        print 'Low, '
+        print 'Your trial number is '+ str(wrongTimes) +' times!'
         wrongTimes+=1
