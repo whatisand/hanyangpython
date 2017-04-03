@@ -16,18 +16,19 @@ print 'Well, '+ myName + ',I am thinking of a number between 1 and 20'
 wrongTimes = 0
 
 
-while True:
+while wrongTimes < 6:
     print 'Take a guess'
     """
     inputnumber = int(raw_input())
     """
     # Check input error
-    try:    
+    try:
         inputnumber = int(raw_input())
     except:
         print 'Please input number'
         continue
-    
+
+    wrongTimes+=1
     
     #TODO Input range check
     if randomNumber == inputnumber:
@@ -37,10 +38,9 @@ while True:
     
     elif inputnumber > randomNumber:
         print 'High, '
-        print 'Your trial number is '+ str(wrongTimes) +' times!'
-        wrongTimes+=1
+        print 'Your try and wrong : '+ str(wrongTimes) +' times!'
         
     elif inputnumber < randomNumber:
         print 'Low, '
-        print 'Your trial number is '+ str(wrongTimes) +' times!'
-        wrongTimes+=1
+        print 'Your try and wrong : '+ str(wrongTimes) +' times!'
+        
